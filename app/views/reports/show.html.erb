@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Resumen de la incidencia</h2>
+  <%= @report.asunto %>
+  <%= @report.descripcion %>
+  <%= @report.fecha_del_incidente %>
+  <% @report.photos.each do |photo| %>
+    <%= image_tag photo %>
+  <% end %>
+</div>
