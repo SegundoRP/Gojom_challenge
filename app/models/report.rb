@@ -1,5 +1,6 @@
 class Report < ApplicationRecord
   before_create :generate_random_id
+  after_create :send_email
 
   validates :asunto, presence: true
   validates :descripcion, presence: true
@@ -13,5 +14,9 @@ class Report < ApplicationRecord
     begin
       self.id = SecureRandom.uuid
     end while Report.where(id: self.id).exists?
+  end
+
+  def send_email
+    ProductOwnerMailer.with(report: self).report_email.deliver!
   end
 end
