@@ -2,29 +2,26 @@
   </mj-head>
   <mj-body>
     <mj-section>
-
       <mj-column>
-        <mj-text><p>Hola, tienes un nuevo reporte de incidencia de un cliente</p></mj-text>
-      </mj-column>
-
+        <mj-text align="center"><h1>Hola, tienes un nuevo reporte de incidencia de un cliente</h1></mj-text>
       <mj-column>
-        <mj-text><%= @report.asunto %></mj-text>
-      </mj-column>
+    </mj-section>
 
+    <mj-section>
       <mj-column>
-        <mj-text><%= @report.descripcion %></mj-text>
+        <mj-text align="center"><p>Asunto: <%= @report.asunto %></p></mj-text>
+        <mj-text><p>Descripción: <%= @report.descripcion %></p></mj-text>
+        <mj-text><p>Fecha: <%= @report.fecha_del_incidente %></p></mj-text>
       </mj-column>
+    </mj-section>
 
-      <mj-column>
-        <mj-text><%= @report.fecha_del_incidente %></mj-text>
-      </mj-column>
-
+    <mj-section>
       <mj-column>
         <% @report.photos.each do |photo| %>
           <mj-image><%= image_tag photo %></mj-image>
         <% end %>
       </mj-column>
-
     </mj-section>
+
   </mj-body>
 </mjml>
