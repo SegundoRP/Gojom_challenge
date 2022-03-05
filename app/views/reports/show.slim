@@ -1,0 +1,14 @@
+.container
+  h2.text-center Resumen de la incidencia
+  p Asunto:
+  = @report.asunto
+  p.mt-3 Descripción:
+  = @report.descripcion
+  p.mt-3 Fecha del incidente:
+  = @report.fecha_del_incidente
+  .cards-photos.mt-3
+    - @report.photos.each do |photo|
+      = image_tag photo, class:"card-photo"
+
+  .mt-4
+  | "Su número de reporte es #{Report.order("created_at DESC").first.random_url}, puede regresar y ver este resumen las veces que quiera ingresando a nuestra web http://localhost:3000/reports/#{Report.order("created_at DESC").first.random_url}"

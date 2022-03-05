@@ -18,7 +18,7 @@
     <mj-section>
       <mj-column>
         <% @report.photos.each do |photo| %>
-          <mj-image><%= image_tag photo %></mj-image>
+          <mj-image><%= image_tag photo%></mj-image>
         <% end %>
       </mj-column>
     </mj-section>

@@ -1,0 +1,10 @@
+.container
+  h1.text-center
+    | Formulario de incidencia
+  .bg-white.p-4
+    = simple_form_for(@report) do |f|
+      = f.input :asunto, label: "Asunto", placeholder: "Detalla el asunto del incidente"
+      = f.rich_text_area :descripcion, placeholder: "Describe la incidencia encontrada", style:"border: 1px solid gray;margin-bottom:10px; height: auto"
+      = f.input :fecha_del_incidente, label: "Fecha del incidente"
+      = f.input :photos, label: "Introduzca fotos del incidente", as: :file, input_html: { multiple: true }
+      = f.submit "Enviar incidencia", class:"btn btn-success"
