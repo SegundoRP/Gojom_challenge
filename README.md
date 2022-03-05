@@ -8,7 +8,7 @@ El proyecto es un formulario mediante el cual los usuarios de Gojom podrán repo
 - Node 14.15.5
 - Action Mailer
 - Active Storage - Cloudinary para las imágenes
-- Action Text - texto enriquecido
+- Action Text - para el texto enriquecido
 - Gemas:
 	- Slim
 	- Mjml-rails
