@@ -20,7 +20,7 @@ El proyecto es un formulario mediante el cual los usuarios de Gojom podrán repo
 	- dotenv-rails
 
 ## Instalación
-###Requerimientos
+Requerimientos
 Antes de comenzar, se necesita instalar lo siguiente:
 - Ruby version 3.0.0 para correr la aplicación
 - Ruby on Rails  6.1.4.6 para correr la aplicación
@@ -56,6 +56,3 @@ cd gojom_challenge
 
 
     CLOUDINARY_URL=cloudinary://298522699261255:Qa1ZfO4syfbOC-***********************8
-
-
-
