@@ -40,7 +40,6 @@ cd gojom_challenge
 
 
     bundle install
-
 3.Instalar los módulos de node
 
 
