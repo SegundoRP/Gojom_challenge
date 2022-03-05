@@ -8,7 +8,7 @@ El proyecto es un formulario mediante el cual los usuarios de Gojom podrán repo
 - Node 14.15.5
 - Action Mailer
 - Active Storage - Cloudinary para las imágenes
-- Action Text - para el texto enriquecido
+- Action Text - texto enriquecido
 - Gemas:
 	- Slim
 	- Mjml-rails
@@ -20,7 +20,7 @@ El proyecto es un formulario mediante el cual los usuarios de Gojom podrán repo
 	- dotenv-rails
 
 ## Instalación
-Requerimientos
+###Requerimientos
 Antes de comenzar, se necesita instalar lo siguiente:
 - Ruby version 3.0.0 para correr la aplicación
 - Ruby on Rails  6.1.4.6 para correr la aplicación
