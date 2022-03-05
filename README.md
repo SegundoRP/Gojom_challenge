@@ -56,3 +56,6 @@ cd gojom_challenge
 
 
     CLOUDINARY_URL=cloudinary://298522699261255:Qa1ZfO4syfbOC-***********************8
+
+
+
