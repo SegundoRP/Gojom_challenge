@@ -36,10 +36,11 @@ Antes de comenzar, se necesita instalar lo siguiente:
 git clone git@github.com:SegundoRP/Gojom_challenge.git
 cd gojom_challenge
 ```
-2.  Para instalar las gemas, correr el siguiente comando en el directorio del proyecto
+2. Para instalar las gemas, correr el siguiente comando en el directorio del proyecto
 
 
     bundle install
+
 3.Instalar los módulos de node
 
 
