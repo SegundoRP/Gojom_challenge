@@ -1,0 +1,27 @@
+  <mj-head>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text><h1>Hola, tienes un nuevo reporte de incidencia de un cliente</h1></mj-text>
+      <mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text><p>Asunto: <%= @report.asunto %></p></mj-text>
+        <mj-text><p>Descripción: <%= @report.descripcion %></p></mj-text>
+        <mj-text><p>Fecha: <%= @report.fecha_del_incidente %></p></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <% @report.photos.each do |photo| %>
+          <mj-image><%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %></mj-image>
+        <% end %>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

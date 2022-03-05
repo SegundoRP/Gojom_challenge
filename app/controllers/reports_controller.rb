@@ -6,7 +6,7 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
-      redirect_to report_path(@report)
+      redirect_to show_reports_path(@report.random_url)
     else
       render :new
     end
@@ -14,12 +14,12 @@ class ReportsController < ApplicationController
 
 
   def show
-    @report = Report.find(params[:id])
+    @report = Report.find_by(random_url: params[:random_url])
   end
 
   private
 
   def report_params
-    params.require(:report).permit(:asunto, :descripcion, :fecha_del_incidente, photos:[])
+    params.require(:report).permit(:asunto, :descripcion, :fecha_del_incidente, :random_url, photos:[])
   end
 end

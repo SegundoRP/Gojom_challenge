@@ -1,8 +1,8 @@
 class Report < ApplicationRecord
-  before_create :generate_random_id
+  before_create :generate_random_url
   after_create :send_email
 
-  validates :asunto, presence: true
+  validates :asunto, presence: true, length: { minimum: 10 }
   validates :descripcion, presence: true
   has_many_attached :photos
   validates :photos, presence: true
@@ -10,12 +10,14 @@ class Report < ApplicationRecord
 
   private
 
-  def generate_random_id
+  # Metodo para generar id randomico y unico
+  def generate_random_url
     begin
-      self.id = SecureRandom.uuid
-    end while Report.where(id: self.id).exists?
+      self.random_url = SecureRandom.uuid
+    end while Report.where(random_url: self.random_url).exists?
   end
 
+  # Metodo que envia mail luego de creado el formulario
   def send_email
     ProductOwnerMailer.with(report: self).report_email.deliver!
   end
