@@ -11,7 +11,7 @@
       <mj-column>
         <mj-text><p>Asunto: <%= @report.asunto %></p></mj-text>
         <mj-text><p>Descripción: <%= @report.descripcion %></p></mj-text>
-        <mj-text><p>Fecha: <%= @report.fecha_del_incidente %></p></mj-text>
+        <mj-text><p>Fecha: <%= l @report.fecha_del_incidente, locale: :es, format: :long %></p></mj-text>
       </mj-column>
     </mj-section>
 
